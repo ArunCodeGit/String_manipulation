@@ -396,37 +396,37 @@ namespace Unsorted_Integer_Arrays
             #region Print string
             //init using string literal
             string s1 = "Arun";
-            //Console.WriteLine(s1);
+            Console.WriteLine(s1);
 
             //assigning one string to another
             string s2 = s1;
-            //Console.WriteLine(s2);
+            Console.WriteLine(s2);
 
             //init using a char array
             char[] charstring = new char[] { 'A', 'r', 'u', 'n' };
             string s3 = new string(charstring);
-            //Console.WriteLine(s3);
+            Console.WriteLine(s3);
 
             //init using repeated char values
             string s4 = new string('A', 20);
-            //Console.WriteLine(s4);
+            Console.WriteLine(s4);
 
             //init using char array with index and length
-            //string s5 = new string(charstring, 2, 3);
-            //Console.WriteLine(s5);
+            string s5 = new string(charstring, 2, 3);
+            Console.WriteLine(s5);
             #endregion
 
             #region Split
 
             ////space as separator
-            //string s6 = "33 44 55";
-            //string[] input = s6.Split(' ');
-            //Console.WriteLine(input[0] + input[1] + input[2]);
+            string s6 = "33 44 55";
+            string[] input = s6.Split(' ');
+            Console.WriteLine(input[0] + input[1] + input[2]);
 
             ////multiple separators
-            //string s7 = "33 44,55";
-            //string[] input1 = s7.Split(' ', ',');
-            //Console.WriteLine(input1[0] + input1[1] + input1[2]);
+            string s7 = "33 44,55";
+            string[] input1 = s7.Split(' ', ',');
+            Console.WriteLine(input1[0] + input1[1] + input1[2]);
 
             #endregion
 
@@ -436,136 +436,136 @@ namespace Unsorted_Integer_Arrays
 
             string s8 = "I am Arun from Trichy";
             string s9 = s8.Substring(5);
-            //Console.WriteLine(s9);
-            //string s10 = s8.Substring(5, 5);
-            //Console.WriteLine(s10);
+            Console.WriteLine(s9);
+            string s10 = s8.Substring(5, 5);
+            Console.WriteLine(s10);
 
             #endregion
 
             #region StartsWith
 
-            //if (s8.StartsWith("I am"))
-            //{
-            //    Console.WriteLine("True: It starts with I am");
-            //}
-            //else
-            //{
-            //    Console.WriteLine("False: Doesn't start with I am");
-            //}
+            if (s8.StartsWith("I am"))
+            {
+                Console.WriteLine("True: It starts with I am");
+            }
+            else
+            {
+                Console.WriteLine("False: Doesn't start with I am");
+            }
 
             #endregion
 
             #region Case-sensitive by Default
             //case sensitive by default
-            //if (s8.StartsWith("i Am"))
-            //{
-            //    Console.WriteLine("True: It starts with i Am");
-            //}
-            //else
-            //{
-            //    Console.WriteLine("False: Doesn't start with i Am");
-            //}
+            if (s8.StartsWith("i Am"))
+            {
+                Console.WriteLine("True: It starts with i Am");
+            }
+            else
+            {
+                Console.WriteLine("False: Doesn't start with i Am");
+            }
             #endregion
 
             #region MyRegion Ignore case and compare
             ////ignore case and compare
-            //if (s8.StartsWith("i Am", true, System.Globalization.CultureInfo.CurrentCulture))
-            //{
-            //    Console.WriteLine("True: It starts with I am");
-            //}
-            //else
-            //{
-            //    Console.WriteLine("False: Doesn't start with I am");
-            //}
+            if (s8.StartsWith("i Am", true, System.Globalization.CultureInfo.CurrentCulture))
+            {
+                Console.WriteLine("True: It starts with I am");
+            }
+            else
+            {
+                Console.WriteLine("False: Doesn't start with I am");
+            }
             #endregion
 
             #region EndsWith
             //ends with
 
-            //if (s8.EndsWith("Trichy"))
-            //{
-            //    Console.WriteLine("True: Ends with Trichy");
-            //}
-            //else
-            //{
-            //    Console.WriteLine("False: Doens't end with Trichy");
-            //}
+            if (s8.EndsWith("Trichy"))
+            {
+                Console.WriteLine("True: Ends with Trichy");
+            }
+            else
+            {
+                Console.WriteLine("False: Doens't end with Trichy");
+            }
 
             #endregion
 
             #region Contains Method
             ////Contains method
-            //if (s8.Contains("Arun"))
-            //{
-            //    Console.WriteLine("True: Contains Arun");
-            //}
-            //else
-            //{
-            //    Console.WriteLine("False: Doesn't Contain Arun");
-            //}
+            if (s8.Contains("Arun"))
+            {
+                Console.WriteLine("True: Contains Arun");
+            }
+            else
+            {
+                Console.WriteLine("False: Doesn't Contain Arun");
+            }
 
             #endregion
 
             #region ElementAt, String.Join, Distinct and Distinct returns IEnumerable<char>
 
-            ////ElementAt
-            //char x = s8.ElementAt(5);
-            //Console.WriteLine(x);
+            //ElementAt
+            char x = s8.ElementAt(5);
+            Console.WriteLine(x);
 
-            ////String.Join
-            //string[] mystrings = new string[] { "I", "am", "Arun", "from", "Trichy" };
-            //Console.WriteLine(string.Join(":", mystrings));
+            //String.Join
+            string[] mystrings = new string[] { "I", "am", "Arun", "from", "Trichy" };
+            Console.WriteLine(string.Join(":", mystrings));
 
-            ////Distinct
-            //char[] s11 = s8.Distinct().ToArray();
-            //string s12 = new string(s11);
-            //Console.WriteLine(s12);
+            //Distinct
+            char[] s11 = s8.Distinct().ToArray();
+            string s12 = new string(s11);
+            Console.WriteLine(s12);
 
             //Distinct returns IEnumerable<char>
-            //foreach (char cc in s8.Distinct())
-            //{
-            //    Console.Write(cc + ", ");
-            //}
+            foreach (char cc in s8.Distinct())
+            {
+                Console.Write(cc + ", ");
+            }
 
             #endregion
 
             #region IndexOf()
-            // //indexof
-            //int LocationOfA = s8.IndexOf("A");
-            //Console.WriteLine(LocationOfA);
-            //int LocationOfa = s8.IndexOf("a");
-            //Console.WriteLine(LocationOfa);
-            //int LocationOfa1 = s8.IndexOf("a", 3);
-            //Console.WriteLine(LocationOfa1);
-            //int LocationOfArun = s8.IndexOf("Arun");
-            //Console.WriteLine(LocationOfArun);
+            //indexof
+            int LocationOfA = s8.IndexOf("A");
+            Console.WriteLine(LocationOfA);
+            int LocationOfa = s8.IndexOf("a");
+            Console.WriteLine(LocationOfa);
+            int LocationOfa1 = s8.IndexOf("a", 3);
+            Console.WriteLine(LocationOfa1);
+            int LocationOfArun = s8.IndexOf("Arun");
+            Console.WriteLine(LocationOfArun);
             #endregion
 
             #region Insert and Replace
-            ////Insert
-            //string s13 = s8.Insert(9, "kumar");
-            //Console.WriteLine(s13);
+            //Insert
+            string s13 = s8.Insert(9, "kumar");
+            Console.WriteLine(s13);
 
             //replace
-            //string samplestring = "Sample {String} is CoMPleX";
-            ////Console.WriteLine(samplestring);
-            //string s14 = samplestring.Replace("{", "").Replace("}", "");
-            ////Console.WriteLine(s14);
+            string samplestring = "Sample {String} is CoMPleX";
+            //Console.WriteLine(samplestring);
+            string s14 = samplestring.Replace("{", "").Replace("}", "");
+            //Console.WriteLine(s14);
             #endregion
 
             #region ToLower, ToUpper and Reverse
-            ////ToLower
-            //string s15 = s14.ToLower();
-            //Console.WriteLine(s15);
+            //ToLower
+            string s15 = s14.ToLower();
+            Console.WriteLine(s15);
 
-            ////ToUpper
-            //string s16 = s14.ToUpper();
-            //Console.WriteLine(s16);
+            //ToUpper
+            string s16 = s14.ToUpper();
+            Console.WriteLine(s16);
 
-            ////Reverse
-            //char[] c1 = s14.Reverse().ToArray();
-            //string s17 = new string(c1);
-            //Console.WriteLine(s17);
+            //Reverse
+            char[] c1 = s14.Reverse().ToArray();
+            string s17 = new string(c1);
+            Console.WriteLine(s17);
             #endregion            
         }
         #endregion
